@@ -15,7 +15,17 @@ public:
         _x += dx;
         _y += dy;
     }
+    
+    float x()
+    {
+        return _x;
+    }
 
+    float y()
+    {
+        return _y;
+    }
+    
 private:
     float _x;
     float _y;

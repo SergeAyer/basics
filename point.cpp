@@ -14,3 +14,13 @@ void Point::move(float dx, float dy)
     _x += dx;
     _y += dy;
 }
+
+float Point::x()
+{
+    return _x;
+}
+
+float Point::y()
+{
+    return _y;
+}
