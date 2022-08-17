@@ -7,17 +7,20 @@
 
 void addOne(int i) 
 {
-    i++; // Has no effect outside this scope because this is a copy of the original
+    // Has no effect outside this scope because this is a copy of the original
+    i++; 
 }
 
 void addOne_ref(int &i) 
 {
-    i++; // Actually changes the original variable
+    // Actually changes the original variable
+    i++; 
 }
 
 void addOne(int *i) 
 {
-    (*i)++; // Actually changes the original variable, but i can be null ! 
+    // Actually changes the original variable, but i can be null ! 
+    (*i)++; 
 }
 
 int main() 
