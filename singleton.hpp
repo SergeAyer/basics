@@ -14,6 +14,6 @@ private:
     Singleton();
 
     // singleton instance
-    static Singleton &_INSTANCE;
+    static Singleton *_INSTANCE;
     int _data;    
 };
