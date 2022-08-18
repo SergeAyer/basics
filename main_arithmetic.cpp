@@ -7,8 +7,8 @@
 
 #include "arithmetic.hpp"
 
-int main() {
-    
+int main() 
+{  
     // use trace library for console output
     mbed_trace_init();
  
