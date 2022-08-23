@@ -8,13 +8,14 @@
 
 void function_with_memory_leak()
 {
-   char* pArray = new char[100];
-   // for preventing compiler optimization use pArray
-   tr_debug("pArray[0] = %d", pArray[0]);
+    // using raw pointer without allocated with new (without calling delete)
+    char* pArray = new char[100];
+    // for preventing compiler optimization use pArray
+    tr_debug("pArray[100] = %d", pArray[0]);
    
-   // return without free
-   // the memory pointed by pArray won't be released
-   // for the lifetime of the program
+    // return without delete
+    // the memory pointed by pArray won't be released
+    // for the lifetime of the program
 }
 
 int main() 
