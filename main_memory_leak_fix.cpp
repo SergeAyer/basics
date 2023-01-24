@@ -11,15 +11,15 @@ void function_with_memory_leak_fix()
     // solution with raw pointer
     char* pArray = new char[100];
     // for preventing compiler optimization use pArray
-    tr_debug("pArray[100] = %d", pArray[100]);
+    tr_debug("pArray[99] = %d", pArray[99]);
     // call delete []    
     delete [] pArray;
     pArray = nullptr;
 
     // solution with unique_ptr 
     // memory will be automatically released when array_ptr is removed from the stack
-    std::unique_ptr<char> array_ptr = std::unique_ptr<char>(new char[100]);
-    tr_debug("array_ptr[100] = %d", array_ptr.get()[100]);    
+    std::unique_ptr<char> array_ptr = std::unique_ptr<char>(new char[99]);
+    tr_debug("array_ptr[99] = %d", array_ptr.get()[99]);    
 }
 
 int main() 
